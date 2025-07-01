@@ -7,32 +7,31 @@ int main(){
     printf("1 - Inciar jogo\n");
     printf("2 - Como funicona ?\n");
     printf("3 - Sair...\n");
-    scanf("%d\n", &option);
+    scanf("%d", &option);
 
     switch (option)
     {
-        case 1:
-             int pecas;
+        case 1: {
+            int pecas;
 
-             
              printf(" Escolha sua peca:\n");
              printf("1 - Torre \n");    
              printf("2 - Bispo\n");
              printf("3 - Rainha\n");
              printf("4 - Cavalo\n");
              printf("5 - Sair do jogo\n");
-             scanf("%d\n", &pecas);
+             scanf("%d", &pecas);
 
-             switch (pecas)
+             switch (pecas) 
              {
-                
-            
+    
                 case 1:
                    printf("Movimentacao torre:\n");
                    for (int torre = 0; torre < 5; torre++)
                    {
                     printf("Direita\n");
                    }
+                
                    break;
 
                 case 2:
@@ -41,6 +40,7 @@ int main(){
                    while (bispo < 5)
                    {
                     printf("Esquerda,Direita\n");
+                    bispo++;
                    }
                    break;
                    
@@ -54,6 +54,7 @@ int main(){
                     printf("Cima\n");
                     rainha++;
                 } while (rainha < 8);
+                break;
                 
 
                 case 4:
@@ -77,6 +78,8 @@ int main(){
                 printf("Opcao errada\n");
                 break;
              }
+            break;
+        }
         
         
         
