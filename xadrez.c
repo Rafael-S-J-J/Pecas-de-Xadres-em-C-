@@ -14,6 +14,8 @@ int main(){
         case 1: {
             int pecas;
 
+            do{
+
              printf(" Escolha sua peca:\n");
              printf("1 - Torre \n");    
              printf("2 - Bispo\n");
@@ -24,14 +26,12 @@ int main(){
 
              switch (pecas) 
              {
-    
                 case 1:
                    printf("Movimentacao torre:\n");
                    for (int torre = 0; torre < 5; torre++)
                    {
                     printf("Direita\n");
                    }
-                
                    break;
 
                 case 2:
@@ -44,8 +44,6 @@ int main(){
                    }
                    break;
                    
-        
-                
                 case 3:
                 printf("Movimento da Rainha\n");
                 int rainha = 0;
@@ -69,17 +67,16 @@ int main(){
 
                 case 5:
                 printf("Sair do jogo\n");
-                return 0;
                 break;
-        
-        
                 
                 default:
-                printf("Opcao errada\n");
+                printf("Opcao invalida! Tente novamente.\n");
                 break;
              }
+
+            } while (pecas != 5);   
             break;
-        }
+         }
         
         
         
@@ -92,6 +89,7 @@ int main(){
         break;
     
         default:
+        printf("Opcao invalida! Tente novamente.\n");
         break;
     }
 
