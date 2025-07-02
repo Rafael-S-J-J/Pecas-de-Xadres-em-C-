@@ -4,27 +4,34 @@ int main(){
 
     int option;
 
+    // Primeiro laço de reptição do menu interativo principal.
+    do{ 
+
+    // Imprimindo as opções do menu e armazenando a opção do usuário.
     printf("1 - Inciar jogo\n");
     printf("2 - Como funicona ?\n");
     printf("3 - Sair...\n");
     scanf("%d", &option);
 
+    // Aplicando o switch de casos correspondente ao meu menu. 
     switch (option)
     {
+
+        // Criando um novo processo de casos usando o switch.
         case 1: {
             int pecas;
 
-            do{
+            do{ // Adicionando mais um laço de reptição para no novo menu
 
              printf(" Escolha sua peca:\n");
              printf("1 - Torre \n");    
              printf("2 - Bispo\n");
              printf("3 - Rainha\n");
              printf("4 - Cavalo\n");
-             printf("5 - Sair do jogo\n");
+             printf("5 - Retornar ao menu principal\n");
              scanf("%d", &pecas);
 
-             switch (pecas) 
+             switch (pecas) // Switch para controle das peças
              {
                 case 1:
                    printf("Movimentacao torre:\n");
@@ -32,6 +39,7 @@ int main(){
                    {
                     printf("Direita\n");
                    }
+                   printf("\n");
                    break;
 
                 case 2:
@@ -42,6 +50,7 @@ int main(){
                     printf("Esquerda,Direita\n");
                     bispo++;
                    }
+                   printf("\n");
                    break;
                    
                 case 3:
@@ -52,6 +61,7 @@ int main(){
                     printf("Cima\n");
                     rainha++;
                 } while (rainha < 8);
+                printf("\n");
                 break;
                 
 
@@ -62,11 +72,13 @@ int main(){
                     printf ("Direita\n");    
                  }
                     printf("Cima\n");
+                    printf("\n");
                 break;
 
 
                 case 5:
-                printf("Sair do jogo\n");
+                printf("Retornar ao menu principal\n");
+                printf("\n");
                 break;
                 
                 default:
@@ -74,14 +86,15 @@ int main(){
                 break;
              }
 
-            } while (pecas != 5);   
+            } while (pecas != 5); // Do-While que faz o case 5 retornar ao menu principal.
             break;
          }
         
         
         
         case 2:
-        printf("Idealização\n");
+        printf("Idealizacao\n");
+        printf("Uma curta demostração de como funciona a movimentacao das pecas de xadres\n");
         break;
 
         case 3:
@@ -92,6 +105,8 @@ int main(){
         printf("Opcao invalida! Tente novamente.\n");
         break;
     }
+
+} while (option != 3);
 
     
     return 0;
